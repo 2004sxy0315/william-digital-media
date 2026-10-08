@@ -16,4 +16,17 @@ h1 {
 h2 {
   color: #3056b5;
   margin-top: 32px;
+}nav {
+  margin-bottom: 40px;
+}
+
+nav a {
+  color: #3056b5;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 24px;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
