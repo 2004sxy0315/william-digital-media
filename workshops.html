@@ -2,49 +2,233 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>William's Workshops</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Updates & Reflections — Xinyang Shao</title>
+
+  <meta
+    name="description"
+    content="Website updates, design decisions and learning reflections by Xinyang Shao."
+  >
+
+  <!-- 与 About 页面共用基础样式 -->
+  <link rel="stylesheet" href="home.css">
+
+  <!-- 仅用于本页的样式 -->
+  <link rel="stylesheet" href="journal.css">
 </head>
 
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="workshops.html">Workshops</a>
-  </nav>
+<body class="journal-page">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <main>
-    <h1>My Workshops</h1>
+  <header class="site-header wrap">
+    <a
+      class="wordmark"
+      href="about.html"
+      aria-label="Xinyang Shao, homepage"
+    >
+      XS<span aria-hidden="true">✳</span>
+    </a>
 
-    <p>
-      This page documents my practical work and reflections
-      as a Digital Media student.
-    </p>
+    <nav aria-label="Main navigation">
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="work.html">Work</a>
+      <a href="workshops.html" aria-current="page">Workshops</a>
+    </nav>
 
-    <article class="workshop-card">
-      <p class="workshop-label">Workshop 1</p>
+    <a class="contact-link" href="mailto:862251571@qq.com">
+      Say hello <span aria-hidden="true">↗</span>
+    </a>
+  </header>
 
-      <h2>Website Development and Deployment</h2>
-
-      <p>
-        <strong>What I made:</strong>
-        A multi-page portfolio website using HTML and CSS.
+  <main id="main" class="wrap">
+    <!-- 页面介绍 -->
+    <section class="journal-intro" aria-labelledby="journal-title">
+      <p class="eyebrow">
+        <span class="orange-dot" aria-hidden="true"></span>
+        THE WEBSITE / A WORK IN PROGRESS
       </p>
 
-      <p>
-        <strong>Tools:</strong>
-        Visual Studio Code, GitHub and GitHub Pages.
+      <h1 id="journal-title">
+        Updates &amp;<br>
+        Reflections<span class="accent">.</span>
+      </h1>
+
+      <p class="journal-description">
+        A record of what I change, what goes wrong,
+        and what I learn while building my personal website.
       </p>
 
-      <p>
-        <strong>What I learned:</strong>
-        HTML controls the structure of a webpage, while CSS
-        controls its visual appearance. I also learned how file
-        paths and browser caching affect an online website.
-      </p>
+      <div class="journal-intro-bottom">
+        <span>DESIGN · DEVELOPMENT · LEARNING</span>
+        <a href="#entries">EXPLORE THE LOG ↓</a>
+      </div>
+    </section>
 
-      <a class="button-link" href="index.html">View homepage</a>
-    </article>
+    <!-- 更新记录：最新的放在最上面 -->
+    <section id="entries" class="journal-entries"
+             aria-labelledby="entries-title">
+
+      <div class="journal-section-heading">
+        <h2 id="entries-title">The development log</h2>
+        <span class="small-label">LATEST FIRST</span>
+      </div>
+
+      <!-- 第 3 条记录 -->
+      <article class="journal-entry">
+        <div class="entry-meta">
+          <span class="entry-number">03</span>
+          <span class="entry-category">VISUAL DESIGN</span>
+          <span class="entry-status">Latest entry</span>
+        </div>
+
+        <div class="entry-content">
+          <h3>Making the homepage feel more personal.</h3>
+
+          <p class="entry-summary">
+            Moving from a basic introduction to a visual identity
+            built around my name, portrait and creative interests.
+          </p>
+
+          <div class="entry-reflection">
+            <h4>What changed</h4>
+            <p>
+              I introduced a dark background, larger typography and
+              orange accents. I replaced the original portrait with
+              a higher-resolution photograph and used CSS gradients
+              and colour adjustments to connect it with the page.
+            </p>
+
+            <h4>What I learned</h4>
+            <p>
+              Adding more decoration does not always improve a design.
+              The bright rectangular photo initially competed with
+              the text. Softening its edges and simplifying the
+              surrounding shapes helped bring the focus back to
+              the person.
+            </p>
+
+            <h4>What I want to improve</h4>
+            <p>
+              Check the portrait crop and text balance on smaller
+              screens, then review whether the visual style feels
+              consistent across the website.
+            </p>
+          </div>
+
+          <a class="text-link" href="about.html">
+            View the About page <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 第 2 条记录 -->
+      <article class="journal-entry">
+        <div class="entry-meta">
+          <span class="entry-number">02</span>
+          <span class="entry-category">SITE STRUCTURE</span>
+        </div>
+
+        <div class="entry-content">
+          <h3>Giving each part of the website a purpose.</h3>
+
+          <p class="entry-summary">
+            Using the About page as an overview, with separate
+            spaces for experience, work and learning.
+          </p>
+
+          <div class="entry-reflection">
+            <h4>What changed</h4>
+            <p>
+              I organised the navigation around About, Experience,
+              Work and Workshops. The About page introduces the
+              whole website, while the other pages provide space
+              to explore individual topics in more detail.
+            </p>
+
+            <h4>What I learned</h4>
+            <p>
+              A personal website needs to explain who I am as well
+              as show what I make. Clear navigation helps visitors
+              choose what they want to explore without putting
+              every detail on the first screen.
+            </p>
+
+            <h4>What comes next</h4>
+            <p>
+              Keep the current Experience and Work pages for now.
+              Develop their content after the overall structure
+              and visual direction are settled.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 第 1 条记录 -->
+      <article class="journal-entry">
+        <div class="entry-meta">
+          <span class="entry-number">01</span>
+          <span class="entry-category">BUILD &amp; PUBLISH</span>
+        </div>
+
+        <div class="entry-content">
+          <h3>Taking my first website online.</h3>
+
+          <p class="entry-summary">
+            Building with HTML and CSS, then publishing through
+            GitHub Pages.
+          </p>
+
+          <div class="entry-reflection">
+            <h4>What I made</h4>
+            <p>
+              I created linked pages in Visual Studio Code, added
+              a shared stylesheet and uploaded the website files
+              to GitHub.
+            </p>
+
+            <h4>What went wrong</h4>
+            <p>
+              My local changes did not immediately appear online.
+              At another stage, a portrait failed to load.
+              These problems made me check uploaded files,
+              image paths and browser caching more carefully.
+            </p>
+
+            <h4>What I learned</h4>
+            <p>
+              Saving a file locally does not update the published
+              website. HTML, CSS and images all need to be uploaded
+              to the correct locations. A hard refresh helped me
+              see an updated page after deployment.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 下一步计划 -->
+    <aside class="journal-next" aria-labelledby="next-title">
+      <p class="eyebrow">NEXT / ON MY LIST</p>
+
+      <h2 id="next-title">Small changes.<br>Clearer direction.</h2>
+
+      <ul>
+        <li>Check navigation and layouts on a phone.</li>
+        <li>Add more context to selected projects.</li>
+        <li>Record future changes with screenshots and reflections.</li>
+      </ul>
+
+      <p class="next-note">
+        These are planned improvements, rather than completed updates.
+      </p>
+    </aside>
   </main>
+
+  <footer class="journal-footer wrap">
+    <span>XINYANG SHAO / LEARNING IN PUBLIC</span>
+    <a href="#main">Back to top ↑</a>
+  </footer>
 </body>
 </html>
