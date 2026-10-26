@@ -259,3 +259,30 @@
     padding: 24px;
   }
 }
+/* 反思记录中的实践截图 */
+.journal-page .journal-images {
+  display: grid;
+  gap: 28px;
+  margin: 28px 0 36px;
+}
+
+.journal-page .journal-images figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.journal-page .journal-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.journal-page .journal-images figcaption {
+  display: block;
+  padding-top: 10px;
+  color: var(--muted);
+  font: 11px/1.7 Consolas, monospace;
+  letter-spacing: 0.5px;
+}

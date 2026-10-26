@@ -75,12 +75,115 @@
         <span class="small-label">LATEST FIRST</span>
       </div>
 
+      <!-- 第 4 条记录：网页抓取实践 -->
+<article class="journal-entry">
+  <div class="entry-meta">
+    <span class="entry-number">04</span>
+    <span class="entry-category">WEB SCRAPING</span>
+    <span class="entry-status">Latest entry</span>
+  </div>
+
+  <div class="entry-content">
+    <h3>Looking beyond the webpage.</h3>
+
+    <p class="entry-summary">
+      Learning to turn programme listings into data—and to
+      question what the results actually represent.
+    </p>
+
+    <div class="entry-reflection">
+      <h4>What I did</h4>
+      <p>
+        I used the workshop’s Python notebook in Google Colab
+        to collect programme titles and descriptions from BBC
+        iPlayer and export them as a CSV file. I then began
+        adapting the process to ITV by inspecting its programme
+        cards and identifying where their information was stored.
+      </p>
+    <div class="journal-images">
+  <!-- 第一张：Colab 中的抓取代码与记录数量 -->
+  <figure>
+    <a
+      href="assets/scraping-result.png"
+      target="_blank"
+      rel="noopener"
+      aria-label="Open the BBC scraping code screenshot at full size in a new tab"
+    >
+      <img
+        src="assets/scraping-result.png"
+        alt="BBC iPlayer scraping code in Google Colab using Python and BeautifulSoup, with an output count of 106 records."
+        loading="lazy"
+      >
+    </a>
+
+    <figcaption>
+      01 / Running the BBC iPlayer scraping notebook in Google
+      Colab. The output shows 106 collected records.
+      Click the image to view full size.
+    </figcaption>
+  </figure>
+
+  <!-- 第二张：在表格中查看导出的 CSV -->
+  <figure>
+    <a
+      href="assets/scraping-inspect.png"
+      target="_blank"
+      rel="noopener"
+      aria-label="Open the exported BBC dataset screenshot at full size in a new tab"
+    >
+      <img
+        src="assets/scraping-inspect.png"
+        alt="The exported bbcprogs.csv file opened in WPS Office, showing programme titles and descriptive information in two columns."
+        loading="lazy"
+      >
+    </a>
+
+    <figcaption>
+      02 / Reviewing the exported bbcprogs.csv file in WPS
+      Office. The two columns contain programme titles and
+      descriptive information.
+      Click the image to view full size.
+    </figcaption>
+  </figure>
+</div>
+      <h4>What challenged me</h4>
+      <p>
+        I initially thought changing the website URL would be
+        enough. Inspecting ITV showed me that its structure
+        was different: programme names and descriptions were
+        combined in an <code>aria-label</code>, rather than
+        stored in separate title elements. I also selected a
+        decorative background layer before finding the
+        programme card I needed.
+      </p>
+
+      <h4>What I learned</h4>
+      <p>
+        My BBC export contained <strong>106 records</strong>
+        but only <strong>89 distinct titles</strong>. This
+        helped me understand that a row is not necessarily
+        a unique programme, and repeated entries may reflect
+        how content appears across different sections.
+        Successfully exporting a file also does not prove
+        that everything on the page has been captured.
+      </p>
+
+      <h4>What comes next</h4>
+      <p>
+        Test the adapted ITV code against the visible page,
+        check for missing or repeated records, and record
+        the collection date and scope. I want to understand
+        what my dataset leaves out, as well as what it contains.
+      </p>
+    </div>
+  </div>
+</article>
       <!-- 第 3 条记录 -->
       <article class="journal-entry">
         <div class="entry-meta">
           <span class="entry-number">03</span>
           <span class="entry-category">VISUAL DESIGN</span>
-          <span class="entry-status">Latest entry</span>
+    
         </div>
 
         <div class="entry-content">
