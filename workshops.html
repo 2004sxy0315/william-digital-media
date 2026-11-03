@@ -3,25 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Updates & Reflections — Xinyang Shao</title>
-
-  <meta
-    name="description"
-    content="Website updates, design decisions and learning reflections by Xinyang Shao."
-  >
-
-  <!-- 与 About 页面共用基础样式 -->
+  <title>Workshops &amp; Reflections — Xinyang Shao</title>
+  <meta name="description" content="Digital Practices learning reflections on website development, web scraping, collaborative data collection and data visualisation.">
   <link rel="stylesheet" href="home.css">
-
-  <!-- 仅用于本页的样式 -->
   <link rel="stylesheet" href="journal.css">
 </head>
-
 <body class="journal-page">
-  <a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header wrap">
+<header class="site-header wrap">
     <a
       class="wordmark"
       href="about.html"
@@ -42,296 +32,97 @@
     </a>
   </header>
 
-  <main id="main" class="wrap">
-    <!-- 页面介绍 -->
-    <section class="journal-intro" aria-labelledby="journal-title">
-      <p class="eyebrow">
-        <span class="orange-dot" aria-hidden="true"></span>
-        THE WEBSITE / A WORK IN PROGRESS
-      </p>
+<main id="main" class="wrap">
+<section class="journal-intro" aria-labelledby="journal-title">
+<p class="eyebrow"><span class="orange-dot" aria-hidden="true"></span>DIGITAL PRACTICES / LEARNING THROUGH MAKING</p>
+<h1 id="journal-title">Workshops &amp;<br>Reflections<span class="accent">.</span></h1>
+<p class="journal-lead">Learning through making, collecting and questioning.</p>
+<p class="journal-description">This page documents my practical learning in Digital Practices: building a website, scraping web content, collecting research evidence and exploring data visualisation. Each reflection considers what I tried, what challenged me and how the experience changed my understanding.</p>
+<nav class="workshop-index" aria-label="Jump to a workshop">
 
-      <h1 id="journal-title">
-        Updates &amp;<br>
-        Reflections<span class="accent">.</span>
-      </h1>
+<a href="#workshop-01"><span>01</span>Website Development<b aria-hidden="true">↘</b></a>
+<a href="#workshop-02"><span>02</span>Web Scraping<b aria-hidden="true">↘</b></a>
+<a href="#workshop-03"><span>03</span>Collaborative Data Collection<b aria-hidden="true">↘</b></a>
+<a href="#workshop-04"><span>04</span>Data Visualisation<b aria-hidden="true">↘</b></a>
+</nav></section><section id="entries" class="journal-entries" aria-labelledby="entries-title"><div class="journal-section-heading"><h2 id="entries-title">Learning, one workshop at a time.</h2><span class="small-label">WORKSHOPS 01—04</span></div>
 
-      <p class="journal-description">
-        A record of what I change, what goes wrong,
-        and what I learn while building my personal website.
-      </p>
+<!-- Workshop 01: edit this article to update this reflection. -->
+<article id="workshop-01" class="journal-entry" aria-labelledby="title-01"><div class="entry-meta"><span class="small-label">WORKSHOP</span><span class="entry-number">01</span><span class="entry-category">WEBSITE DEVELOPMENT</span></div><div class="entry-content"><h3 id="title-01">Building a space of my own.</h3><p class="entry-summary">Turning a first HTML page into a personal website—and learning how its structure, appearance and publication fit together.</p><div class="entry-reflection">
 
-      <div class="journal-intro-bottom">
-        <span>DESIGN · DEVELOPMENT · LEARNING</span>
-        <a href="#entries">EXPLORE THE LOG ↓</a>
-      </div>
-    </section>
+<h4>What I did</h4>
+<p>I built a personal website using HTML and CSS in Visual Studio Code and published it through GitHub Pages. I connected pages through navigation links and added images and workshop reflections. In later revisions, I developed a darker visual style with orange accents and a portrait to make the website feel more personal.</p>
 
-    <!-- 更新记录：最新的放在最上面 -->
-    <section id="entries" class="journal-entries"
-             aria-labelledby="entries-title">
+<h4>What challenged me</h4>
+<p>A page working locally did not always mean it worked online. Some images failed to load, and the published website sometimes displayed an older version. These problems helped me distinguish between saving files, uploading them, deploying the website and refreshing the browser.</p>
 
-      <div class="journal-section-heading">
-        <h2 id="entries-title">The development log</h2>
-        <span class="small-label">LATEST FIRST</span>
-      </div>
+<h4>What I learned</h4>
+<p>HTML gives content its structure, while CSS controls its presentation. I also began to understand how class connects elements to styling rules and how href connects pages. Publishing made file organisation important: images and stylesheets need to be uploaded with the correct paths. A navigation link also needs an actual destination page.</p>
 
-      <!-- 第 4 条记录：网页抓取实践 -->
-<article class="journal-entry">
-  <div class="entry-meta">
-    <span class="entry-number">04</span>
-    <span class="entry-category">WEB SCRAPING</span>
-    <span class="entry-status">Latest entry</span>
-  </div>
-
-  <div class="entry-content">
-    <h3>Looking beyond the webpage.</h3>
-
-    <p class="entry-summary">
-      Learning to turn programme listings into data—and to
-      question what the results actually represent.
-    </p>
-
-    <div class="entry-reflection">
-      <h4>What I did</h4>
-      <p>
-        I used the workshop’s Python notebook in Google Colab
-        to collect programme titles and descriptions from BBC
-        iPlayer and export them as a CSV file. I then began
-        adapting the process to ITV by inspecting its programme
-        cards and identifying where their information was stored.
-      </p>
-    <div class="journal-images">
-  <!-- 第一张：Colab 中的抓取代码与记录数量 -->
-  <figure>
-    <a
-      href="assets/scraping-result.png"
-      target="_blank"
-      rel="noopener"
-      aria-label="Open the BBC scraping code screenshot at full size in a new tab"
-    >
-      <img
-        src="assets/scraping-result.png"
-        alt="BBC iPlayer scraping code in Google Colab using Python and BeautifulSoup, with an output count of 106 records."
-        loading="lazy"
-      >
-    </a>
-
-    <figcaption>
-      01 / Running the BBC iPlayer scraping notebook in Google
-      Colab. The output shows 106 collected records.
-      Click the image to view full size.
-    </figcaption>
-  </figure>
-
-  <!-- 第二张：在表格中查看导出的 CSV -->
-  <figure>
-    <a
-      href="assets/scraping-inspect.png"
-      target="_blank"
-      rel="noopener"
-      aria-label="Open the exported BBC dataset screenshot at full size in a new tab"
-    >
-      <img
-        src="assets/scraping-inspect.png"
-        alt="The exported bbcprogs.csv file opened in WPS Office, showing programme titles and descriptive information in two columns."
-        loading="lazy"
-      >
-    </a>
-
-    <figcaption>
-      02 / Reviewing the exported bbcprogs.csv file in WPS
-      Office. The two columns contain programme titles and
-      descriptive information.
-      Click the image to view full size.
-    </figcaption>
-  </figure>
+<h4>What comes next</h4>
+<p>I want to test the website more systematically across screen sizes and check every navigation link and image after publishing. I also want to make the reflections easier to follow, so the website communicates my learning as clearly as it presents my work.</p>
 </div>
-      <h4>What challenged me</h4>
-      <p>
-        I initially thought changing the website URL would be
-        enough. Inspecting ITV showed me that its structure
-        was different: programme names and descriptions were
-        combined in an <code>aria-label</code>, rather than
-        stored in separate title elements. I also selected a
-        decorative background layer before finding the
-        programme card I needed.
-      </p>
+<a class="text-link" href="about.html">Explore my website <span aria-hidden="true">↗</span></a>
+</div></article>
 
-      <h4>What I learned</h4>
-      <p>
-        My BBC export contained <strong>106 records</strong>
-        but only <strong>89 distinct titles</strong>. This
-        helped me understand that a row is not necessarily
-        a unique programme, and repeated entries may reflect
-        how content appears across different sections.
-        Successfully exporting a file also does not prove
-        that everything on the page has been captured.
-      </p>
+<!-- Workshop 02: edit this article to update this reflection. -->
+<article id="workshop-02" class="journal-entry" aria-labelledby="title-02"><div class="entry-meta"><span class="small-label">WORKSHOP</span><span class="entry-number">02</span><span class="entry-category">WEB SCRAPING</span></div><div class="entry-content"><h3 id="title-02">Looking beyond the webpage.</h3><p class="entry-summary">Learning to turn programme listings into data—and to question what the extracted results actually represent.</p><div class="entry-reflection">
 
-      <h4>What comes next</h4>
-      <p>
-        Test the adapted ITV code against the visible page,
-        check for missing or repeated records, and record
-        the collection date and scope. I want to understand
-        what my dataset leaves out, as well as what it contains.
-      </p>
-    </div>
-  </div>
-</article>
-      <!-- 第 3 条记录 -->
-      <article class="journal-entry">
-        <div class="entry-meta">
-          <span class="entry-number">03</span>
-          <span class="entry-category">VISUAL DESIGN</span>
-    
-        </div>
+<h4>What I did</h4>
+<p>I used the workshop’s Python notebook in Google Colab to collect BBC iPlayer programme titles and descriptions with Requests and BeautifulSoup. I exported the results as a CSV file and inspected them in a spreadsheet. I then explored how to adapt the process to ITV by inspecting its programme cards.</p>
 
-        <div class="entry-content">
-          <h3>Making the homepage feel more personal.</h3>
+<h4>What challenged me</h4>
+<p>I initially expected that changing the website address would be enough. However, ITV organised its information differently. I first selected a decorative background element before locating the relevant programme card, where descriptive information was stored in an aria-label.</p>
 
-          <p class="entry-summary">
-            Moving from a basic introduction to a visual identity
-            built around my name, portrait and creative interests.
-          </p>
+<h4>What I learned</h4>
+<p>Scraping depends on understanding a website’s structure, rather than simply copying visible text. My BBC export contained 106 records but 89 distinct titles, showing that a row does not necessarily represent a unique programme. Repeated entries may reflect placement across different sections. A successful export also does not prove that every relevant item was captured.</p>
 
-          <div class="entry-reflection">
-            <h4>What changed</h4>
-            <p>
-              I introduced a dark background, larger typography and
-              orange accents. I replaced the original portrait with
-              a higher-resolution photograph and used CSS gradients
-              and colour adjustments to connect it with the page.
-            </p>
+<h4>What comes next</h4>
+<p>I need to test the adapted ITV extraction against the visible page and check for missing or repeated entries. Recording the collection date, page scope and selection rules would make the dataset easier to interpret and the process easier to repeat.</p>
+</div>
+<div class="journal-images">
+<figure><a href="assets/scraping-result.png" target="_blank" rel="noopener" aria-label="Running the BBC iPlayer scraping notebook in Google Colab. The output shows 106 collected records. Open full size in a new tab."><img src="assets/scraping-result.png" alt="Running the BBC iPlayer scraping notebook in Google Colab. The output shows 106 collected records." loading="lazy" width="2543" height="1526"></a><figcaption>Running the BBC iPlayer scraping notebook in Google Colab. The output shows 106 collected records. Click to view full size in a new tab.</figcaption></figure>
+<figure><a href="assets/scraping-inspect.png" target="_blank" rel="noopener" aria-label="Reviewing bbcprogs.csv in WPS Office, with programme titles and descriptive information in two columns. Open full size in a new tab."><img src="assets/scraping-inspect.png" alt="Reviewing bbcprogs.csv in WPS Office, with programme titles and descriptive information in two columns." loading="lazy" width="2560" height="1528"></a><figcaption>Reviewing bbcprogs.csv in WPS Office, with programme titles and descriptive information in two columns. Click to view full size in a new tab.</figcaption></figure>
+</div>
+</div></article>
 
-            <h4>What I learned</h4>
-            <p>
-              Adding more decoration does not always improve a design.
-              The bright rectangular photo initially competed with
-              the text. Softening its edges and simplifying the
-              surrounding shapes helped bring the focus back to
-              the person.
-            </p>
+<!-- Workshop 03: edit this article to update this reflection. -->
+<article id="workshop-03" class="journal-entry" aria-labelledby="title-03"><div class="entry-meta"><span class="small-label">WORKSHOP</span><span class="entry-number">03</span><span class="entry-category">COLLABORATIVE DATA COLLECTION</span></div><div class="entry-content"><h3 id="title-03">From a broad question to usable evidence.</h3><p class="entry-summary">Exploring how students describe creative control when working with generative AI.</p><div class="entry-reflection">
 
-            <h4>What I want to improve</h4>
-            <p>
-              Check the portrait crop and text balance on smaller
-              screens, then review whether the visual style feels
-              consistent across the website.
-            </p>
-          </div>
+<h4>What I contributed</h4>
+<p>Our group investigated how students describe their sense of control over creative decisions when using generative AI. My contributions were helping to define the research question, finding relevant sources and organising the evidence into a spreadsheet.</p>
+<p>The final independent collection used four studies and contained 14 evidence records: 12 directly relevant records and two background records. The dataset retained source information and coding explanations so that each selection could be traced back to its context. AI assistance supported the collection and initial coding process.</p>
 
-          <a class="text-link" href="about.html">
-            View the About page <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </article>
+<h4>What challenged me</h4>
+<p>Finding material about AI was easier than finding evidence that answered our specific question. Statements about efficiency, originality or ownership did not necessarily explain students’ control over creative decisions. Organising the spreadsheet required distinguishing direct quotations, researchers’ summaries and our interpretations, rather than treating them as equivalent evidence.</p>
 
-      <!-- 第 2 条记录 -->
-      <article class="journal-entry">
-        <div class="entry-meta">
-          <span class="entry-number">02</span>
-          <span class="entry-category">SITE STRUCTURE</span>
-        </div>
+<h4>What I learned</h4>
+<p>Defining the question and collecting the data were connected tasks. A clearer question helped me decide what belonged in the spreadsheet and what should remain background material.</p>
+<p>I also recognised that collecting data involves power: published studies already select which experiences to report, and our selection and coding further shape which voices become visible. The 14 records were pieces of evidence, not 14 individual students. Their distribution cannot represent all students or prove that AI generally reduces creative control.</p>
 
-        <div class="entry-content">
-          <h3>Giving each part of the website a purpose.</h3>
+<h4>What comes next</h4>
+<p>I would compare the initial coding with my group members’ interpretations and return to the original passages where we disagree. With more time, I would also seek evidence from a wider range of creative tasks and student backgrounds, while keeping the selection criteria consistent.</p>
+</div>
+</div></article>
 
-          <p class="entry-summary">
-            Using the About page as an overview, with separate
-            spaces for experience, work and learning.
-          </p>
+<!-- Workshop 04: edit this article to update this reflection. -->
+<article id="workshop-04" class="journal-entry" aria-labelledby="title-04"><div class="entry-meta"><span class="small-label">WORKSHOP</span><span class="entry-number">04</span><span class="entry-category">DATA VISUALISATION</span></div><div class="entry-content"><h3 id="title-04">Making patterns visible without losing context.</h3><p class="entry-summary">Using Excel to explore how the presentation of data shapes its interpretation.</p><div class="entry-reflection">
 
-          <div class="entry-reflection">
-            <h4>What changed</h4>
-            <p>
-              I organised the navigation around About, Experience,
-              Work and Workshops. The About page introduces the
-              whole website, while the other pages provide space
-              to explore individual topics in more detail.
-            </p>
+<h4>What I did</h4>
+<p>I used Excel to organise data and create different tables during the data visualisation workshop. Building on the previous group task, I considered how structured information could help an audience compare categories and understand the evidence behind our research question.</p>
 
-            <h4>What I learned</h4>
-            <p>
-              A personal website needs to explain who I am as well
-              as show what I make. Clear navigation helps visitors
-              choose what they want to explore without putting
-              every detail on the first screen.
-            </p>
+<h4>What I reflected on</h4>
+<p>The workshop prompted me to think about what an audience needs to understand, rather than simply how to make a presentation look attractive. A table can preserve detail, while a chart can make comparisons easier to notice. Choosing between them depends on the question and the information being presented.</p>
+<p>For our dataset, the distinction between evidence records and individual students was especially important. A clear-looking display could still mislead viewers if that distinction was missing.</p>
 
-            <h4>What comes next</h4>
-            <p>
-              Keep the current Experience and Work pages for now.
-              Develop their content after the overall structure
-              and visual direction are settled.
-            </p>
-          </div>
-        </div>
-      </article>
+<h4>What I learned</h4>
+<p>Preparing a visualisation begins with understanding the dataset: what each row represents, what the variables mean and which comparisons are appropriate. Numerical category codes are labels, so calculating their average would not produce a meaningful measure of creative control.</p>
+<p>I also learned to consider how titles, labels, colour and category choices guide attention. Presenting data responsibly means making its scope and uncertainty visible, including records whose meaning remains unclear.</p>
 
-      <!-- 第 1 条记录 -->
-      <article class="journal-entry">
-        <div class="entry-meta">
-          <span class="entry-number">01</span>
-          <span class="entry-category">BUILD &amp; PUBLISH</span>
-        </div>
-
-        <div class="entry-content">
-          <h3>Taking my first website online.</h3>
-
-          <p class="entry-summary">
-            Building with HTML and CSS, then publishing through
-            GitHub Pages.
-          </p>
-
-          <div class="entry-reflection">
-            <h4>What I made</h4>
-            <p>
-              I created linked pages in Visual Studio Code, added
-              a shared stylesheet and uploaded the website files
-              to GitHub.
-            </p>
-
-            <h4>What went wrong</h4>
-            <p>
-              My local changes did not immediately appear online.
-              At another stage, a portrait failed to load.
-              These problems made me check uploaded files,
-              image paths and browser caching more carefully.
-            </p>
-
-            <h4>What I learned</h4>
-            <p>
-              Saving a file locally does not update the published
-              website. HTML, CSS and images all need to be uploaded
-              to the correct locations. A hard refresh helped me
-              see an updated page after deployment.
-            </p>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- 下一步计划 -->
-    <aside class="journal-next" aria-labelledby="next-title">
-      <p class="eyebrow">NEXT / ON MY LIST</p>
-
-      <h2 id="next-title">Small changes.<br>Clearer direction.</h2>
-
-      <ul>
-        <li>Check navigation and layouts on a phone.</li>
-        <li>Add more context to selected projects.</li>
-        <li>Record future changes with screenshots and reflections.</li>
-      </ul>
-
-      <p class="next-note">
-        These are planned improvements, rather than completed updates.
-      </p>
-    </aside>
-  </main>
-
-  <footer class="journal-footer wrap">
-    <span>XINYANG SHAO / LEARNING IN PUBLIC</span>
-    <a href="#main">Back to top ↑</a>
-  </footer>
-</body>
-</html>
+<h4>What comes next</h4>
+<p>I want to develop the Excel tables into a small selection of clearly labelled charts, each addressing a specific question. For the creative-control project, I would state that the figures describe selected evidence records and include the sources and limitations. I would then ask someone outside the group to explain what they think the visualisation shows, to check whether the intended message is clear.</p>
+</div>
+</div></article>
+</section>
+<aside class="journal-next" aria-labelledby="next-title"><p class="eyebrow">CONTINUING THE PRACTICE</p><h2 id="next-title">Make. Question.<br>Reflect.</h2><p class="next-note">For future workshops, I will keep examples of my work alongside notes on the choices I made, the limits I noticed and what I would try next.</p></aside>
+</main><footer class="journal-footer wrap"><span>XINYANG SHAO / DIGITAL PRACTICES</span><a href="#main">Back to top ↑</a></footer>
+</body></html>
